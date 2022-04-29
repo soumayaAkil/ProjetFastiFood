@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">testing</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nos_boissons">Nos Boissons</string>
+    <string name="menu">Menu</string>
+    <string name="nos_repas">Nos repas</string>
+    <string name="nos_desserts">Nos desserts</string>
+    <string name="tv_submit_cat">Choisir Catégorie</string>
+    <string name="tv_submit_unite">Ajouter au panier</string>
+    <string name="edt_nomprod">Entrer le nom de produit</string>
+    <string name="tv_ajoutProd">Ajouter Produit</string>
+    <string name="tv_catt">Vous douvez ajouter :</string>
+
+    <string name="edt_prixProd">Entrer le prix de produit</string>
+    <string name="tv_chImage">Choisir Image</string>
+    <string name="tv_comacc">Commandes Acceptés</string>
+    <string name="tv_comref">Commandes Refusés</string>
+    <string name="tv_cat">Nos Catégories</string>
+    <string name="tv_menu">Menu</string>
+    <string name="Avant"><![CDATA[<-]]></string>
+    <string name="Apres"><![CDATA[->]]></string>
+    <string-array name="array_status">
+        <item>en attent</item>
+        <item>accepté</item>
+        <item>refusé</item>
+
+    </string-array>
+    >>>>>>> Stashed changes
+</resources>
