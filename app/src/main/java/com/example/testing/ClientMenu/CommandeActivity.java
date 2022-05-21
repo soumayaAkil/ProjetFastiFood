@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.testing.CommandeFragment;
+import com.example.testing.G_Produit.ListCategorieClientActivity;
 import com.example.testing.R;
 
 public class CommandeActivity extends AppCompatActivity {
@@ -23,9 +23,11 @@ public class CommandeActivity extends AppCompatActivity {
         rl_commande.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment unFragment=null;
+               /* Fragment unFragment=null;
                 unFragment= new AcceuilClientFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentplaceholder,unFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragmentplaceholder,unFragment).commit();*/
+                Intent i= new Intent(getApplicationContext(), ListCategorieClientActivity.class);
+                startActivity(i);
                 Toast.makeText(CommandeActivity.this, "you paid  !", Toast.LENGTH_SHORT).show();
             }
         });
