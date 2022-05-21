@@ -101,7 +101,7 @@ public class UploadImageActivity extends AppCompatActivity implements View.OnCli
         OkHttpClient client = new OkHttpClient.Builder().build();
 
 
-        apiService = new Retrofit.Builder().baseUrl("http://192.168.43.178:5000").client(client).build().create(ApiService.class);
+        apiService = new Retrofit.Builder().baseUrl("http://172.16.13.46:5000").client(client).build().create(ApiService.class);
 
     }
 

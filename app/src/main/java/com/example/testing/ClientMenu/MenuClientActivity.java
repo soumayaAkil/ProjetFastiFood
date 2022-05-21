@@ -1,4 +1,4 @@
-package com.example.testing.G_Produit;
+package com.example.testing.ClientMenu;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,19 +9,18 @@ import android.view.MenuItem;
 
 import com.example.testing.AcceuilFragment;
 import com.example.testing.CommandeFragment;
-import com.example.testing.FavoriesFragment;
 import com.example.testing.ListCatFragment;
 import com.example.testing.Profile.ProfileFragment;
 import com.example.testing.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuClientActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_menu_client);
         bottomNavigationView=(BottomNavigationView) findViewById(R.id.bottomnavigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(naviglistener);
     }
@@ -32,16 +31,16 @@ public class MenuActivity extends AppCompatActivity {
             switch (menuItem.getItemId())
             {
                 case R.id.Acceuil:
-                    unFragment= new AcceuilFragment();
+                    unFragment= new AcceuilClientFragment();
                     break;
                 case R.id.Commande:
-                    unFragment= new CommandeFragment();
+                    unFragment= new CommandeClientFragment();
                     break;
                 case R.id.ListCat:
-                    unFragment= new ListCatFragment();
+                    unFragment= new ListCatClientFragment();
                     break;
                 case R.id.Profile:
-                    unFragment= new ProfileFragment();
+                    unFragment= new ProfileClientFragment();
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentplaceholder,unFragment).commit();

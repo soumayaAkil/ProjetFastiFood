@@ -21,7 +21,7 @@ import retrofit.Retrofit;
 
 public class ListCategorieClientActivity extends AppCompatActivity {
 
-    int id_restau=2;
+    int id_restau=1;
     GridView simpleList;
     List<Categorie> CatList;
     @Override

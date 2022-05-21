@@ -6,8 +6,8 @@
         android:icon="@drawable/ic_restaurant_24"
         android:title="Acceuil"/>
     <item
-        android:id="@+id/Recherche"
-        android:icon="@drawable/ic_search"
+        android:id="@+id/ListCat"
+        android:icon="@drawable/ic_baseline_list_alt_24"
         android:title="Recherche"/>
     <item
         android:id="@+id/Commande"

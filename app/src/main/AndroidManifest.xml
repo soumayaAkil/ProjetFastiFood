@@ -18,17 +18,25 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/fastifoodremove"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Testing"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Splash.RestauClientActivity"></activity>
+        <activity android:name=".Splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ClientMenu.MenuClientActivity" />
+        <activity android:name=".G_Panier.PanierActivity" />
         <activity android:name=".G_Produit.ListMenuByIdCatActivity" />
         <activity android:name=".G_Produit.ListCategorieClientActivity" />
-
         <activity android:name=".G_Produit.UploadImageActivity" />
 
         <provider
@@ -45,14 +53,7 @@
         <activity android:name=".G_Produit.CategorieActivity" />
         <activity android:name=".G_Produit.DetailProdActivity" />
         <activity android:name=".G_Produit.MenuActivity" />
-
-        <activity android:name=".Profile.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".Profile.MainActivity"></activity>
     </application>
 
 </manifest>

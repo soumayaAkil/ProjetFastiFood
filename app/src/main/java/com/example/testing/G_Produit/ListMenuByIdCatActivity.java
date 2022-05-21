@@ -5,12 +5,15 @@ import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
 import android.widget.TextView;
 
 import com.example.testing.Api.Api_Client.ApiClient;
 import com.example.testing.Api.Api_GProduit.ApiProduit;
+import com.example.testing.G_Panier.PanierActivity;
 import com.example.testing.G_Produit.Adapter.MenuByCatAdapter;
+import com.example.testing.Models.MyDatabase;
 import com.example.testing.Models.Produit;
 import com.example.testing.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -25,7 +28,7 @@ import retrofit.Retrofit;
 
 public class ListMenuByIdCatActivity extends AppCompatActivity {
 
-
+    public static MyDatabase myDatabase;
     int id_cat;
     GridView simpleList;
     FloatingActionButton goPanier;
@@ -66,6 +69,35 @@ public class ListMenuByIdCatActivity extends AppCompatActivity {
             }
         });
 
+
+        goPanier=(FloatingActionButton) findViewById(R.id.shopp_button);
+        cartcount=(TextView)findViewById(R.id.cartcount);
+        goPanier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), PanierActivity.class);
+                startActivity(i);
+            }
+        });
+
+        myDatabase= Room.databaseBuilder(getApplicationContext(),MyDatabase.class,"My_Cart").allowMainThreadQueries().build();
+
+        updatacartcount();
+    }
+
+    private void updatacartcount() {
+        if (cartcount==null)return;
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (myDatabase.cartDao().countCart()==0)
+                    cartcount.setVisibility(View.INVISIBLE);
+                else {
+                    cartcount.setVisibility(View.VISIBLE);
+                    cartcount.setText(String.valueOf(myDatabase.cartDao().countCart()));
+                }
+            }
+        });
 
   }
 }

@@ -16,6 +16,7 @@ import com.example.testing.Api.Api_Client.ApiClient;
 import com.example.testing.Api.Api_GProduit.ApiHandler;
 import com.example.testing.Api.Api_GProduit.ApiProduit;
 import com.example.testing.Api.Api_GProduit.ApiUnite;
+import com.example.testing.G_Panier.PanierActivity;
 import com.example.testing.Models.Cart;
 import com.example.testing.Models.Root;
 import com.example.testing.Models.RootForRestau;
@@ -207,7 +208,37 @@ public class DetailProdActivity extends AppCompatActivity {
 
         // go to panier
 
+        RelativeLayout rv_submit=(RelativeLayout) findViewById(R.id.rl_submit_go_to_panier);
+        rv_submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+
+
+
+                Intent intent=new Intent(getApplicationContext(), PanierActivity.class);
+                //intent.putExtra("prixTotal",prixTotal);
+
+
+
+                Cart cart=new Cart();
+                cart.setId_prod(id_prod);
+                cart.setImageProd(imageProd);
+                cart.setNomRest(nomRest.designation);
+                cart.setNomProd(nomProd);
+                cart.setPrixProd(prix);
+                cart.setQuantite(1);
+                if (ListMenuByIdCatActivity.myDatabase.cartDao().isAddToCart(id_prod)!=1){
+                    ListMenuByIdCatActivity.myDatabase.cartDao().addToCart(cart);
+                    Intent i = new Intent(getApplicationContext(),PanierActivity.class);
+                    startActivity(i);
+                    Toast.makeText(DetailProdActivity.this, "Added to cart!", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(DetailProdActivity.this, "You are Already added to cart!", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
         
     }
 
