@@ -25,7 +25,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Testing"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Splash.RestauClientActivity"></activity>
+        <activity android:name=".ClientMenu.CommandeActivity"></activity>
+        <activity android:name=".Splash.RestauClientActivity" />
         <activity android:name=".Splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,7 +54,7 @@
         <activity android:name=".G_Produit.CategorieActivity" />
         <activity android:name=".G_Produit.DetailProdActivity" />
         <activity android:name=".G_Produit.MenuActivity" />
-        <activity android:name=".Profile.MainActivity"></activity>
+        <activity android:name=".Profile.MainActivity" />
     </application>
 
 </manifest>

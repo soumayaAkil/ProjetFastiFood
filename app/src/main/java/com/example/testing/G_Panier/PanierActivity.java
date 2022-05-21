@@ -12,9 +12,11 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.testing.ClientMenu.CommandeActivity;
 import com.example.testing.G_Panier.Adapter.PanierAdapter;
 import com.example.testing.G_Produit.ListCategorieClientActivity;
 import com.example.testing.G_Produit.ListMenuByIdCatActivity;
@@ -33,6 +35,7 @@ public class PanierActivity extends AppCompatActivity {
     TextView tvcount,prixTotal;
     ImageView back;
     Float prixx=0f;
+    Button btn_validPanier;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +83,16 @@ public class PanierActivity extends AppCompatActivity {
 
 
         prixTotal=(TextView) findViewById(R.id.TotalPrice);
+
+
+        btn_validPanier=findViewById(R.id.btn_validPanier);
+        btn_validPanier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), CommandeActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 

@@ -22,6 +22,15 @@
     <string name="tv_menu">Menu</string>
     <string name="Avant"><![CDATA[<-]]></string>
     <string name="Apres"><![CDATA[->]]></string>
+    <string name="voir_cat_gorie"><u>Voir Catégorie</u></string>
+    <string name="edt_nom">Entrer votre nom et prenom</string>
+    <string name="edt_num">Entrer votre num de telephone</string>
+    <string name="edt_adresse">Entrer votre adresse</string>
+    <string name="edt_region">Entrer votre region</string>
+    <string name="tv_comm">Commander</string>
+    <string name="rd_dom">A domicile</string>
+    <string name="rd_place">Sur Place</string>
+    <string name="rb_emp">A emporter</string>
     <string-array name="array_status">
         <item>en attent</item>
         <item>accepté</item>

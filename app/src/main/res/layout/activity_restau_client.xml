@@ -15,6 +15,7 @@
         android:background="@drawable/rectange_gradient"
        android:layout_centerInParent="true"
         android:text="Restau"
+        android:textColor="@color/white"
         tools:ignore="MissingConstraints,NotSibling" />
     <Button
         android:id="@+id/buttonClient"
@@ -24,5 +25,6 @@
         android:background="@drawable/rectange_gradient"
         android:layout_below="@+id/buttonRestau"
         android:text="Client"
+        android:textColor="@color/white"
         tools:ignore="MissingConstraints,NotSibling" />
 </RelativeLayout>

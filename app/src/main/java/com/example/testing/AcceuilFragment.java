@@ -1,5 +1,6 @@
 package com.example.testing;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,11 +11,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.testing.Api.Api_Client.ApiClient;
 import com.example.testing.Api.Api_GProduit.ApiHandler;
 import com.example.testing.G_Produit.Adapter.ProduitAdapter;
+import com.example.testing.G_Produit.AjouterProduitActivity;
+import com.example.testing.G_Produit.CategorieActivity;
+import com.example.testing.G_Produit.ListCategorieClientActivity;
 import com.example.testing.Models.Produit;
 
 import java.util.ArrayList;
@@ -47,6 +53,7 @@ public class AcceuilFragment extends Fragment {
     private RecyclerView.LayoutManager layoutManager;
     private ProduitAdapter produitAdapter;
 
+    private RelativeLayout rv_add_prod;
     public AcceuilFragment() {
         // Required empty public constructor
     }
@@ -83,6 +90,17 @@ public class AcceuilFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_acceuil, container, false);
+
+        rv_add_prod=v.findViewById(R.id.rl_go_add_prod);
+        rv_add_prod.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getActivity(), CategorieActivity.class);
+                startActivity(i);
+
+
+            }
+        });
 
         //menu
 
