@@ -18,7 +18,7 @@
             app:strokeColor="@color/teal_200"
 
             app:shapeAppearanceOverlay="@style/circular"
-            android:src="@drawable/unnamed"/>
+            />
 
         <TextView
             android:id="@+id/titre"

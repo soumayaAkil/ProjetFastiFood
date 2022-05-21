@@ -32,10 +32,12 @@ import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE;
 public class CatMenuAdapter extends ArrayAdapter {
     List<Categorie> CatList= new ArrayList<>();
     Context context;
+
     public CatMenuAdapter(@NonNull Context context, int resource, @NonNull List objects) {
         super(context, resource, objects);
         CatList= objects;
         context=context;
+
     }
     @Override
     public int getCount() {
