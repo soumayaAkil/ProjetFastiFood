@@ -16,24 +16,40 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Promotion"
+            android:text="Profil"
             android:id="@+id/promo"
             android:textSize="30dp"
             android:layout_centerInParent="true"
             android:textColor="@color/white"/>
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/textViewTitre"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginStart="60dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="200dp"
+        android:text="Ayechi"
+        tools:ignore="MissingConstraints" />
 
-    <GridView
-        android:id="@+id/gridViewListPromoClient"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="250dp"
-        android:numColumns="2"
-        android:stretchMode="columnWidth"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/coursierbg"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/num"
+        android:layout_below="@id/textViewTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="29456789"
+        android:layout_marginLeft="60dp"
+        android:textSize="20dp"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
