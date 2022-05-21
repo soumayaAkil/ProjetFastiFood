@@ -37,9 +37,6 @@ public class MenuActivity extends AppCompatActivity {
                 case R.id.Commande:
                     unFragment= new CommandeFragment();
                     break;
-                case R.id.ListCat:
-                    unFragment= new ListCatFragment();
-                    break;
                 case R.id.Profile:
                     unFragment= new ProfileFragment();
                     break;
