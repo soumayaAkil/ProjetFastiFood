@@ -8,9 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.testing.AcceuilFragment;
-import com.example.testing.CommandeFragment;
-import com.example.testing.FavoriesFragment;
-import com.example.testing.ListCatFragment;
+import com.example.testing.Commande.CommandeFragment;
 import com.example.testing.Profile.ProfileFragment;
 import com.example.testing.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
