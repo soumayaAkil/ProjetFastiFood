@@ -59,7 +59,7 @@ public class DetailCommande extends AppCompatActivity {
 
             @Override
             public void onFailure(Throwable t) {
-
+                System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
             }
         });
 
