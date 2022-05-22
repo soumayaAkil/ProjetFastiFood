@@ -55,7 +55,7 @@
     android:layout_below="@id/card"
     android:id="@+id/nom"
     android:layout_centerInParent="true"
-    android:text="Amir Mannai"/>
+    android:text="Ahmed Trabelssi"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_below="@id/nom"
@@ -97,7 +97,7 @@
                 android:layout_marginTop="40dp"
 
                 android:id="@+id/email"
-                android:text="amirmannai@gmail.com"/>
+                android:text="AhmedTrabelssi@gmail.com"/>
             <View
                 android:layout_below="@id/email"
                 android:layout_width="match_parent"
@@ -139,7 +139,7 @@
                 android:layout_marginTop="40dp"
 
                 android:id="@+id/adresse"
-                android:text="7 rue kahra cité nassim tunis"/>
+                android:text="7 rue kahra cité nassim Beja"/>
             <View
                 android:layout_below="@id/adresse"
                 android:layout_width="match_parent"
@@ -181,7 +181,7 @@
                 android:layout_marginTop="40dp"
 
                 android:id="@+id/mobile"
-                android:text="25478963"/>
+                android:text="51425425"/>
             <View
                 android:layout_below="@id/mobile"
                 android:layout_width="match_parent"
