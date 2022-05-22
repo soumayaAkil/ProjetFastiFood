@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     android:clickable="true"
     tools:context=".ClientMenu.AcceuilClientFragment">
 
@@ -34,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/voir_cat_gorie"
-                    android:layout_marginLeft="150dp"
+                    android:layout_marginLeft="130dp"
                     android:textSize="17sp"
                     android:textColor="@color/orange"/>
             </LinearLayout>
