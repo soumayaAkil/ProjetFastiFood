@@ -9,7 +9,8 @@ public class ApiClient {
 
 
 
-    private static final String BASE_URL="http://192.168.43.19:5000/";
+    private static final String BASE_URL="http://192.168.43.124:5000/";
+   // private static final String BASE_URL="http://192.168.43.19:5000/";
 
 
 

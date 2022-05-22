@@ -6,5 +6,9 @@
     <style name="rounded">
     <item name="cornerSize">10%</item>
 </style>
+    <style name="roundedP">
+        <item name="cornerSize">40%</item>
+
+    </style>
 
 </resources>
