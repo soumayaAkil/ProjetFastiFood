@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.testing.AcceuilFragment;
+import com.example.testing.ClientMenu.CommandeClientFragment;
 import com.example.testing.Commande.CommandeFragment;
 import com.example.testing.Profile.ProfileFragment;
 import com.example.testing.R;
@@ -33,7 +34,8 @@ public class MenuActivity extends AppCompatActivity {
                     unFragment= new AcceuilFragment();
                     break;
                 case R.id.Commande:
-                    unFragment= new CommandeFragment();
+                    unFragment= new CommandeClientFragment();
+
                     break;
                 case R.id.Profile:
                     unFragment= new ProfileFragment();
