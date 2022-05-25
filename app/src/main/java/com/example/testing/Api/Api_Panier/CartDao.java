@@ -26,6 +26,10 @@ public interface CartDao {
     int deleteItem(int id);
     //incremente quantity
 
+    @Query("DELETE FROM MyCart")
+    int deleteAll();
+    //incremente quantity
+
     @Query("UPDATE MyCart SET quantite=:quantite+1 WHERE id_prod = :id")
     public int incrquantity(int quantite, int id);
 

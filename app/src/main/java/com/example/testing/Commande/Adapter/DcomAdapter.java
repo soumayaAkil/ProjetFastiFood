@@ -45,7 +45,7 @@ public class DcomAdapter extends RecyclerView.Adapter<DcomAdapter.DcomViewHolder
         holder.quantite.setText(String.valueOf(DC.getQuantite()));
         holder.nomProd.setText(DC.getProduit());
 
-        Picasso.get().load(BASE_URL_IMAGE+"uploads/"+DC.image_produit).into(holder.imageProd);
+        Picasso.get().load(BASE_URL_IMAGE_MS+"uploads/"+DC.image_produit).into(holder.imageProd);
         holder.prix.setText(Double.toString(DC.getPrix()));
         holder.nomUnite.setText(DC.getUnite());
         Dcommande detcom = listDc.get(position);

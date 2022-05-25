@@ -51,6 +51,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         myDatabase= Room.databaseBuilder(context.getApplicationContext(), MyDatabase.class,"My_Cart").allowMainThreadQueries().build();
         Cart panier=listPanier.get(position);
 
+
         Integer pr=Integer.parseInt(panier.getPrixProd());
         int qntpp=myDatabase.cartDao().getqntapr(panier.getId_prod());
         int prr=pr*qntpp;
@@ -76,6 +77,9 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
         // holder.prixprod.setText(panier.getPrixProd()+"DT");
 
 //}
+
+        // supp element
+
 
         //incremente quantite
 
@@ -119,7 +123,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
 
 
         // holder.quantite.setText((panier.getQuantite());
-        Picasso.get().load(BASE_URL_IMAGE+"uploads/"+panier.getImageProd()).into(holder.imageProd);
+        Picasso.get().load(BASE_URL_IMAGE_MS+"uploads/"+panier.getImageProd()).into(holder.imageProd);
 
 
     }
@@ -133,6 +137,7 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
     }
 
     public class PanierViewHolder extends  RecyclerView.ViewHolder{
+    //    myDatabase= Room.databaseBuilder(this, MyDatabase.class,"My_Cart").allowMainThreadQueries().build();
         ShapeableImageView imageProd;
         ImageView incrQ,decrQ;
         TextView designation,nomProd,prixprod,quantite;
@@ -145,6 +150,13 @@ public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierView
             quantite=itemView.findViewById(R.id.quantite);
             incrQ =itemView.findViewById(R.id.addProd);
             decrQ = itemView.findViewById(R.id.decProd);
+
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    return false;
+                }
+            });
 
         }
     }

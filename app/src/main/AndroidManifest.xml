@@ -34,11 +34,13 @@
         <activity android:name=".Commande.DetailFacteur" />
         <activity android:name=".Splash.RestauClientActivity" />
         <activity android:name=".Splash.SplashActivity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
         <activity android:name=".ClientMenu.MenuClientActivity" />
         <activity android:name=".G_Panier.PanierActivity" />
@@ -56,8 +58,12 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".G_Produit.AjouterProduitActivity" />
-        <activity android:name=".G_Produit.CategorieActivity" />
+        <activity android:name=".G_Produit.AjouterProduitActivity" >
+
+        </activity>
+        <activity android:name=".G_Produit.CategorieActivity" >
+
+        </activity>
         <activity android:name=".G_Produit.DetailProdActivity" />
         <activity android:name=".G_Produit.MenuActivity" />
 

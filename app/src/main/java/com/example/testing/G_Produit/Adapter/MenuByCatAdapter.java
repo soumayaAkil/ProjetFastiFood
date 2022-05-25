@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.example.testing.Api.Api_Client.ApiClient;
+import com.example.testing.Api.Api_Client.ApiClientMS;
 import com.example.testing.Api.Api_GProduit.ApiProduit;
 import com.example.testing.G_Produit.DetailProdActivity;
 import com.example.testing.Models.Produit;
@@ -65,14 +65,14 @@ public class MenuByCatAdapter extends ArrayAdapter {
         });
 
 
-        ApiProduit api= ApiClient.getClient().create(ApiProduit.class);
+        ApiProduit api= ApiClientMS.getClient().create(ApiProduit.class);
         Call<String> pic = api.getPicture(MenuByCatList.get(position).getId_prod());
         pic.enqueue(new Callback<String>() {
             @Override
             public void onResponse(Response<String> response, Retrofit retrofit) {
                 String picture=response.body();
 
-              Picasso.get().load(BASE_URL_IMAGE+"uploads/"+picture).into(imageView);
+              Picasso.get().load(BASE_URL_IMAGE_MS+"uploads/"+picture).into(imageView);
             //    Picasso.get().load("http://172.16.23.70:5000/images/"+picture).into(imageView);
 
             }

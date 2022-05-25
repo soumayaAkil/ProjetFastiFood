@@ -33,7 +33,7 @@ public class PanierActivity extends AppCompatActivity {
     private PanierAdapter panierAdapter;
     List<Cart> listPanier;
     TextView tvcount,prixTotal;
-    ImageView back;
+    ImageView back,delete_panier;
     Float prixx=0f;
     Button btn_validPanier;
 
@@ -41,6 +41,8 @@ public class PanierActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panier);
+
+
         listPanier = new ArrayList<Cart>();
         listPanier= ListMenuByIdCatActivity.myDatabase.cartDao().getData();
 
@@ -75,6 +77,34 @@ public class PanierActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(), ListCategorieClientActivity.class);
                 startActivity(i);
+            }
+        });
+
+        delete_panier=(ImageView) findViewById(R.id.delete);
+        delete_panier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ListMenuByIdCatActivity.myDatabase.cartDao().deleteAll();
+                listPanier = new ArrayList<Cart>();
+                listPanier= ListMenuByIdCatActivity.myDatabase.cartDao().getData();
+
+                // listPanier.add(new Cart(1,"cheeseCake",R.drawable.cheesecake,"restau",12,5));
+                // listPanier.add(new Cart(1,"Jus fraise",R.drawable.jusfraise,"restau",20,5));
+                // listPanier.add(new Cart(1,"Lasagne",R.drawable.lasagne,"restau",7,5));
+
+
+                rv_panier=findViewById(R.id.rv_panier);
+                //on veut un recyclerview qui utilise un linearlayoutManager
+                layoutManager = new LinearLayoutManager(getApplicationContext(),RecyclerView.VERTICAL,false);
+                rv_panier.setLayoutManager(layoutManager);
+                //on donne notre adapter à notre recyclerview
+                panierAdapter = new PanierAdapter(listPanier, getApplicationContext());
+                rv_panier.setAdapter(panierAdapter);
+                //on sépare chaque ligne de notre liste par un trait
+                DividerItemDecoration dividerItemDecoration;
+                dividerItemDecoration = new DividerItemDecoration(rv_panier.getContext(),DividerItemDecoration.VERTICAL);
+                rv_panier.addItemDecoration(dividerItemDecoration);
             }
         });
 

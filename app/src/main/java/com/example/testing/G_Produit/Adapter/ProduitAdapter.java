@@ -15,7 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.testing.Api.Api_Client.ApiClient;
+import com.example.testing.Api.Api_Client.ApiClientMS;
 import com.example.testing.Api.Api_GProduit.ApiHandler;
 import com.example.testing.Models.Produit;
 import com.example.testing.R;
@@ -29,6 +29,7 @@ import retrofit.Response;
 import retrofit.Retrofit;
 
 import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE;
+import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE_MS;
 
 
 public class ProduitAdapter extends RecyclerView.Adapter<ProduitAdapter.ProduitViewHolder> {
@@ -57,7 +58,7 @@ public class ProduitAdapter extends RecyclerView.Adapter<ProduitAdapter.ProduitV
         final Bitmap[] bmp = new Bitmap[1];
 
         Produit produit=listProduit.get(position);
-        ApiHandler api= ApiClient.getClient().create(ApiHandler.class);
+        ApiHandler api= ApiClientMS.getClient().create(ApiHandler.class);
         //Call<String> image = api.getPicture(produit.getId_prod());
 
 
@@ -71,7 +72,7 @@ public class ProduitAdapter extends RecyclerView.Adapter<ProduitAdapter.ProduitV
 
                 // holder.image.setImageDrawable(Drawable.createFromPath("http://localhost:5000/uploads/tartes"));
 
-                Picasso.get().load(BASE_URL_IMAGE+"uploads/"+picture).into(holder.image);
+                Picasso.get().load(BASE_URL_IMAGE_MS+"uploads/"+picture).into(holder.image);
 
             }
 
