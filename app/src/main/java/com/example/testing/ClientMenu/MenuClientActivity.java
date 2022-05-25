@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.testing.Commande.CommandeFragment;
+import com.example.testing.PromotionP.PromotionFragment;
 import com.example.testing.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -29,6 +30,9 @@ public class MenuClientActivity extends AppCompatActivity {
             {
                 case R.id.Acceuil:
                     unFragment= new AcceuilClientFragment();
+                    break;
+                case R.id.Promo:
+                    unFragment= new PromotionFragment();
                     break;
                 case R.id.Commande:
                     unFragment= new CommandeFragment();

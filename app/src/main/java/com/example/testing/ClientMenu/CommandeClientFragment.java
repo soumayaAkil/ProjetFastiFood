@@ -1,5 +1,6 @@
 package com.example.testing.ClientMenu;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,12 +10,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.example.testing.Api.Api_Client.ApiClient;
 import com.example.testing.Api.Api_Commande.ApiComR;
+import com.example.testing.Calendrier.CalendarActivity;
 import com.example.testing.Commande.Adapter.comRAdapter;
+import com.example.testing.G_Produit.CategorieActivity;
 import com.example.testing.Models.commandeRestau;
 import com.example.testing.R;
+import com.example.testing.Reclamation.ReclamationActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +44,7 @@ public class CommandeClientFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private RelativeLayout   rv_consult,rv_rec,rv_cln;
     private RecyclerView rv_comR;
     private RecyclerView.LayoutManager layoutManager;
     private com.example.testing.Commande.Adapter.comRAdapter comRAdapter;
@@ -80,6 +85,37 @@ public class CommandeClientFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_commande_client, container, false);
+        rv_consult=v.findViewById(R.id.rl_go_com);
+        rv_consult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getActivity(), CategorieActivity.class);
+                startActivity(i);
+
+
+            }
+        });
+        rv_rec=v.findViewById(R.id.rl_go_rec);
+        rv_rec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getActivity(), ReclamationActivity.class);
+                startActivity(i);
+
+
+            }
+        });
+        rv_cln=v.findViewById(R.id.rl_go_calendrier);
+        rv_cln.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getActivity(), CalendarActivity.class);
+                startActivity(i);
+
+
+            }
+        });
+
 
         ApiComR api = ApiClient.getClient().create(ApiComR.class);
         Call<List<commandeRestau>> listComByRes = api.getFactByIdRestau(2);

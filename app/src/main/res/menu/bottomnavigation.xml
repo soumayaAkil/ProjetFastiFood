@@ -5,7 +5,10 @@
         android:id="@+id/Acceuil"
         android:icon="@drawable/ic_restaurant_24"
         android:title="Acceuil"/>
-
+    <item
+        android:id="@+id/Promo"
+        android:icon="@drawable/ic_commande_24"
+        android:title="Commande"/>
     <item
         android:id="@+id/Commande"
         android:icon="@drawable/ic_commande_24"

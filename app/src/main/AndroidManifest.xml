@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.testing">
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
     <uses-feature
         android:name="android.hardware.camera2"
         android:required="false" />
@@ -25,20 +28,55 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Testing"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Calendrier.Commandesj"></activity>
+        <activity android:name=".Calendrier.CalendarActivity" />
+        <activity android:name=".Reclamation.AjouterAREcActivity" />
+        <activity android:name=".Reclamation.AddReclamation" />
+        <activity android:name=".Reclamation.ReclamationActivity" />
 
-        <activity android:name=".ClientMenu.CommandeActivity"></activity>
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
+        <!--
+               Set to true if your app is Standalone, that is, it does not require the handheld
+               app to run.
+        -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
 
+        <activity
+            android:name=".PromotionP.UploadImagePromoActivity"
+            android:label="@string/title_activity_upload_image_promo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PromotionP.addPromotion"
+            android:label="@string/title_activity_add_promotion">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".Commande.DetailCommande"></activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Commande.DetailFactR" />
+        <activity android:name=".Commande.AcceptRefuseActivity" />
+        <activity android:name=".G_Panier.ModePayement" />
+        <activity android:name=".G_Panier.ModeLivraison" />
+        <activity android:name=".G_Panier.FUcommande" />
+        <activity android:name=".Commande.DetailCommande" />
         <activity android:name=".Commande.DetailFacteur" />
         <activity android:name=".Splash.RestauClientActivity" />
-        <activity android:name=".Splash.SplashActivity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".ClientMenu.MenuClientActivity" />
         <activity android:name=".G_Panier.PanierActivity" />
@@ -60,10 +98,7 @@
         <activity android:name=".G_Produit.CategorieActivity" />
         <activity android:name=".G_Produit.DetailProdActivity" />
         <activity android:name=".G_Produit.MenuActivity" />
-
         <activity android:name=".Profile.MainActivity" />
-
-
     </application>
 
 </manifest>
