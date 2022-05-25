@@ -18,6 +18,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
+import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE;
+
 public class CMJAdapter extends RecyclerView.Adapter<CMJAdapter.cmjrViewHolder> {
     List<commande> listcj;
     Context context;
@@ -40,7 +42,7 @@ public class CMJAdapter extends RecyclerView.Adapter<CMJAdapter.cmjrViewHolder> 
 
         commande DF = listcj.get(position);
         holder.heure.setText(DF.getHeure());
-        Picasso.get().load("http://192.168.43.178:5000/uploads/"+DF.image_produit).into(holder.imageproduit);
+        Picasso.get().load(BASE_URL_IMAGE+"uploads/"+DF.image_produit).into(holder.imageproduit);
         holder.prix.setText(String.valueOf(DF.getPrix()));
         holder.nomUnite.setText(DF.getUnite());
         holder.quantite.setText(String.valueOf(DF.getQuantite()));
