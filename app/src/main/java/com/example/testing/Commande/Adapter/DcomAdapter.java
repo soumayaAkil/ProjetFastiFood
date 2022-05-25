@@ -20,6 +20,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE;
+import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE_MS;
 
 public class DcomAdapter extends RecyclerView.Adapter<DcomAdapter.DcomViewHolder>{
     List<Dcommande> listDc;

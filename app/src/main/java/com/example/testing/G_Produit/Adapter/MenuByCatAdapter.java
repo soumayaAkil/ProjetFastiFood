@@ -27,6 +27,7 @@ import retrofit.Response;
 import retrofit.Retrofit;
 
 import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE;
+import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE_MS;
 
 
 public class MenuByCatAdapter extends ArrayAdapter {
