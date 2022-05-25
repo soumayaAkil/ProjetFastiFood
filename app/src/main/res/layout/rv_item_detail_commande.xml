@@ -10,7 +10,7 @@
         android:id="@+id/rl_card_comR"
         style="@style/card_style"
         tools:ignore="MissingConstraints"
-        android:layout_width="400dp"
+        android:layout_width="350dp"
         >
         <ImageView
             android:id="@+id/imageProd"
@@ -48,7 +48,7 @@
             />
         <TextView
             android:id="@+id/nomProd"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="makloub"
@@ -59,7 +59,7 @@
             />
         <TextView
             android:id="@+id/unite"
-            android:layout_marginLeft="200dp"
+            android:layout_marginLeft="180dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="maxi"
