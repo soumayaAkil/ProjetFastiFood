@@ -22,6 +22,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE;
+import static com.example.testing.Profile.MainActivity.BASE_URL_IMAGE_MS;
 
 public class PanierAdapter extends RecyclerView.Adapter<PanierAdapter.PanierViewHolder>{
     List<Cart> listPanier;
