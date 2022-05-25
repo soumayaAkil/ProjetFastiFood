@@ -16,7 +16,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.testing.ClientMenu.CommandeActivity;
 import com.example.testing.G_Panier.Adapter.PanierAdapter;
 import com.example.testing.G_Produit.ListCategorieClientActivity;
 import com.example.testing.G_Produit.ListMenuByIdCatActivity;
@@ -35,13 +34,25 @@ public class PanierActivity extends AppCompatActivity {
     TextView tvcount,prixTotal;
     ImageView back,delete_panier;
     Float prixx=0f;
-    Button btn_validPanier;
+    Button btn_validPanier, commander;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panier);
 
+
+
+
+        commander =(Button) findViewById(R.id.btnvcommande);
+        //Vers page mode de livraison
+        commander.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(), ModeLivraison.class);
+                startActivity(i);
+            }
+        });
 
         listPanier = new ArrayList<Cart>();
         listPanier= ListMenuByIdCatActivity.myDatabase.cartDao().getData();
@@ -114,15 +125,19 @@ public class PanierActivity extends AppCompatActivity {
 
         prixTotal=(TextView) findViewById(R.id.TotalPrice);
 
+ /*   private void updatacartcount() {
+        int count=panierAdapter.getItemCount();
 
-        btn_validPanier=findViewById(R.id.btn_validPanier);
-        btn_validPanier.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), CommandeActivity.class);
-                startActivity(i);
-            }
-        });
+        if (count==0){
+            tvcount.setText("Your Cart is Empty");
+        }else {
+            tvcount.setText(String.valueOf(count));
+        }
+
+
+
+    }*/
+
 
     }
 

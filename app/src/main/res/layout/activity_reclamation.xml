@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Reclamation.ReclamationActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Mes Reclamtions"
+        android:textSize="25dp"
+
+        android:id="@+id/TxtvREC"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
+    <RelativeLayout
+        android:id="@+id/rl_go_add_rec"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/circle_gradient"
+        android:layout_marginLeft="500dp"
+        app:layout_constraintRight_toRightOf="@id/TxtvREC"
+        android:layout_marginTop="30dp"
+        android:padding="10dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"/></RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RcvReclamtions"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

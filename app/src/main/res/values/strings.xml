@@ -37,5 +37,12 @@
         <item>refusé</item>
 
     </string-array>
+    <string name="title_activity_add_promotion">addPromotion</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_upload_image_promo">UploadImagePromoActivity</string>
     >>>>>>> Stashed changes
 </resources>

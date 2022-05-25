@@ -3,13 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clickable="true"
     tools:context=".ClientMenu.CommandeClientFragment">
     <include
         layout="@layout/toolbar"
         />
 
+    <RelativeLayout
+        android:id="@+id/rl_go_com"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
 
+        android:background="@drawable/circle_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="300dp"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="->"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"/></RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_go_rec"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:background="@drawable/circle_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="250dp"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reclamation"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"/></RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_go_calendrier"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:background="@drawable/circle_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="200dp"
+        android:layout_marginBottom="30dp"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reclamation"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@color/white"/></RelativeLayout>
     <ImageView
         android:id="@+id/mgbg"
         android:layout_width="match_parent"
